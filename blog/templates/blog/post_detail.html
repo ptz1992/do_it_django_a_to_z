@@ -12,6 +12,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'blog/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
         <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}" media="screen" />
+        <script src="https://kit.fontawesome.com/bd8fbb96a8.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -45,16 +47,25 @@
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                         </header>
-                        <!-- Preview image -->
+                        <!-- Preview image figure-->
+                        <figure>
                         {% if post.head_image %}
                             <img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ post.title }} head_image"/>
                         {% else %}
                             <img class="img-fluid rounded" src="https://picsum.photos/seed/{{ p.id }}/800/200" alt="random_image"/>
                         {% endif %}
+                        </figure>
                         <!-- Post content-->
                         <section class="mb-5">
                             <p>{{ post.content }}</p>
                         </section>
+
+                        {% if post.file_upload %}
+                            <a href="{{ post.file_upload.url }}" class="btn btn-primary" role="button" download>
+                                <i class="fa-regular fa-circle-down"></i>{{ post.get_file_name }}
+                            </a>
+                        {% endif %}
+
                     </article>
                     <!-- Comments section-->
                     <section class="mb-5">
