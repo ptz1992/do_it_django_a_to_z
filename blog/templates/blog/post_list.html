@@ -78,9 +78,11 @@
 
   <div class="container my-3">
     <div class="row">
-      <div class="col-md-8 col-lg-9">
+      <div class="col-md-8 col-lg-9" id="main-area">
         <h1>Blog</h1>
-        {% for p in post_list %}
+
+          {% if post_list.exists %}
+          {% for p in post_list %}
         <!-- Blog post-->
         <div class="card mb-4">
           {% if p.head_image %}
@@ -94,11 +96,14 @@
               {% if p.hook_text %}
                 <h4 class="text-muted">{{ p.hook_text }}</h4>
               {% endif %}
-              <p class="card-text">{{ p.content | truncateword:45}}</p>
+              <p class="card-text">{{ p.content | truncatewords:45}}</p>
               <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
           </div>
         </div>
         {% endfor %}
+          {% else %}
+            <h3>아직 게시물이 없습니다.</h3>
+          {% endif %}
         <!-- Blog post-->
         <div class="card mb-4">
           <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
