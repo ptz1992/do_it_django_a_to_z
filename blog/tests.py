@@ -18,8 +18,7 @@ class TestView(TestCase) :
 
         self.category_programming = Category.objects.create(name="programming",
                                                             slug="programming")
-        self.category_music = Category.objects.create(name="music",
-                                                            slug="music")
+        self.category_music = Category.objects.create(name="music", slug="music")
         self.tag_python_kor = Tag.objects.create(name='파이썬 공부', slug='파이썬-공부')
         self.tag_python = Tag.objects.create(name='python', slug='python')
         self.tag_hello = Tag.objects.create(name='hello', slug='hello')
@@ -308,7 +307,7 @@ class TestView(TestCase) :
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertEqual(Comment.onjects.count(), 2)
+        self.assertEqual(Comment.objects.count(), 2)
         self.assertEqual(self.post_001.comment_set.count(), 2)
 
         new_comment = Comment.objects.last()
@@ -358,7 +357,7 @@ class TestView(TestCase) :
         self.assertIn(self.comment_001.content, content_textarea.text)
 
         response = self.client.post(
-            f'/blog/update_comment/{self.comment_001.pk}',
+            f'/blog/update_comment/{self.comment_001.pk}/',
             {
                 'content': "오바마의 댓글을 수정합니다.",
             },

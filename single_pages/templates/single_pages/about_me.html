@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="card" data-toggle="modal" data-target="#pycon2017">
-                    <img class="card-img-top" src="{% static 'single_pages/images/' %}">
+                    <img class="card-img-top" src="{% static 'single_pages/images/binary-g99c09766c_640.jpg' %}">
                     <div class="card-body">
                         <h5 class="card-title">파이썬으로 통계업무 자동화하기 [PYCON2017]</h5>
                         <p>Python, Django, Pandas, python-docx로 통계업무 자동화한 내용을 파이콘에서 발표했습니다.</p>
@@ -69,7 +69,7 @@
 
             <div class="col-lg-4">
                 <div class="card" data-toggle="modal" data-target="#inflearn_django2">
-                    <img class="card-img-top" src="{% static 'single_pages/images/' %}">
+                    <img class="card-img-top" src="{% static 'single_pages/images/developer-g7fe080871_640.png' %}">
                     <div class="card-body">
                         <h5 class="card-title">파이썬 사용자를 위한 웹개발 입문 A to Z Django + Bootstrap</h5>
                         <p>파이썬 웹개발에 대한 인프런 동영상 강의입니다.</p>
@@ -79,7 +79,7 @@
 
             <div class="col-lg-4">
                 <div class="card" data-toggle="modal" data-target="#automation_python">
-                    <img class="card-img-top" src="{% static 'single_pages/images/' %}">
+                    <img class="card-img-top" src="{% static 'single_pages/images/programming-gf9552978a_640.jpg' %}">
                     <div class="card-body">
                         <h5 class="card-title">직장인을 위한 프로그래밍 입문과 업무자동화 활용</h5>
                         <p>파이썬 업무자동화에 대한 인프런 동영상 강의입니다.</p>
@@ -94,94 +94,7 @@
 {% include 'blog/footer.html' %}
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id=""><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp&nbsp; Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
-                        <i class="fab fa-google"></i>&nbsp&nbsp; Log in with Google</a>
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Log in with Username</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Sign Up with E-mail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearnDjangoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="a"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp&nbsp; Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
-                        <i class="fab fa-google"></i>&nbsp&nbsp; Log in with Google</a>
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Log in with Username</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Sign Up with E-mail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="automation_python" tabindex="-1" role="dialog" aria-labelledby="automationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="b"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp&nbsp; Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
-                        <i class="fab fa-google"></i>&nbsp&nbsp; Log in with Google</a>
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Log in with Username</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a role= "button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/">
-                        <i class="far fa-envelope"></i>&nbsp&nbsp; Sign Up with E-mail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
